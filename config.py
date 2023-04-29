@@ -13,7 +13,7 @@ available_setting = {
     # openai api配置
     "open_ai_api_key": "",  # openai api key
     # openai 尾巴
-    "open_ai_reply_tail": "", 
+    "open_ai_reply_tail": "\n——————————————\n 想给自己的群里也部署一个专有ChatGPT吗？联系小助理给你安排。", 
     # openai apibase，当use_azure_chatgpt为true时，需要设置对应的api base
     "open_ai_api_base": "https://api.openai.com/v1",
     "proxy": "",  # openai使用的代理

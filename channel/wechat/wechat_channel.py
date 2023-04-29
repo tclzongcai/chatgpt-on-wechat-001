@@ -36,7 +36,6 @@ def handler_single_msg(msg):
     WechatChannel().handle_single(cmsg)
     return None
 
-
 @itchat.msg_register([TEXT, VOICE, PICTURE, NOTE], isGroupChat=True)
 def handler_group_msg(msg):
     try:

@@ -181,13 +181,13 @@ class WechatChannel(ChatChannel):
         receiver = context["receiver"]
         if reply.type == ReplyType.TEXT:
             itchat.send(reply.content, toUserName=receiver)
-            logger.info("[WX] sendMsg={}, receiver={}".format(reply, receiver))
+            logger.info("111[WX] sendMsg={}, receiver={}".format(reply, receiver))
         elif reply.type == ReplyType.ERROR or reply.type == ReplyType.INFO:
             itchat.send(reply.content, toUserName=receiver)
-            logger.info("[WX] sendMsg={}, receiver={}".format(reply, receiver))
+            logger.info("222[WX] sendMsg={}, receiver={}".format(reply, receiver))
         elif reply.type == ReplyType.VOICE:
             itchat.send_file(reply.content, toUserName=receiver)
-            logger.info("[WX] sendFile={}, receiver={}".format(reply.content, receiver))
+            logger.info("333[WX] sendFile={}, receiver={}".format(reply.content, receiver))
         elif reply.type == ReplyType.IMAGE_URL:  # 从网络下载图片
             img_url = reply.content
             pic_res = requests.get(img_url, stream=True)
@@ -196,9 +196,9 @@ class WechatChannel(ChatChannel):
                 image_storage.write(block)
             image_storage.seek(0)
             itchat.send_image(image_storage, toUserName=receiver)
-            logger.info("[WX] sendImage url={}, receiver={}".format(img_url, receiver))
+            logger.info("444[WX] sendImage url={}, receiver={}".format(img_url, receiver))
         elif reply.type == ReplyType.IMAGE:  # 从文件读取图片
             image_storage = reply.content
             image_storage.seek(0)
             itchat.send_image(image_storage, toUserName=receiver)
-            logger.info("[WX] sendImage, receiver={}".format(receiver))
+            logger.info("555[WX] sendImage, receiver={}".format(receiver))

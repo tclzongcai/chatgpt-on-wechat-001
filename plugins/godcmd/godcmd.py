@@ -178,7 +178,7 @@ class Godcmd(Plugin):
                 gconf = json.load(f)
         if gconf["password"] == "":
             self.temp_password = "".join(random.sample(string.digits, 4))
-            logger.info("[Godcmd] 因未设置口令，本次的临时口令为%s。" % self.temp_password)
+            logger.info("111111[Godcmd] 因未设置口令，本次的临时口令为%s。" % self.temp_password)
         else:
             self.temp_password = None
         custom_commands = conf().get("clear_memory_commands", [])

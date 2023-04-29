@@ -193,7 +193,7 @@ class Godcmd(Plugin):
         self.isrunning = True  # 机器人是否运行中
 
         self.handlers[Event.ON_HANDLE_CONTEXT] = self.on_handle_context
-        logger.info("[Godcmd] inited")
+        logger.info("22222[Godcmd] inited")
 
     def on_handle_context(self, e_context: EventContext):
         context_type = e_context["context"].type

@@ -25,7 +25,6 @@ from lib import itchat
 from lib.itchat.content import *
 from plugins import *
 
-
 @itchat.msg_register([TEXT, VOICE, PICTURE, NOTE])
 def handler_single_msg(msg):
     try:

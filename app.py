@@ -52,6 +52,5 @@ def run():
         logger.error("App startup failed!")
         logger.exception(e)
 
-
 if __name__ == "__main__":
     run()

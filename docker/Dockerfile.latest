@@ -5,8 +5,10 @@ ARG TZ='Asia/Shanghai'
 
 ARG CHATGPT_ON_WECHAT_VER
 
-RUN echo /etc/apt/sources.list
-RUN sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+# RUN echo /etc/apt/sources.list
+# RUN sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+# 添加GitHub源
+RUN echo "deb https://github.com/cloudfusion-io/deb-github-release/releases/download/v1.1.0-beta /" >> /etc/apt/sources.list  
 ENV BUILD_PREFIX=/app
 
 ADD . ${BUILD_PREFIX}

@@ -6,7 +6,6 @@ from bridge.bridge import Bridge
 from bridge.context import Context
 from bridge.reply import *
 
-
 class Channel(object):
     NOT_SUPPORT_REPLYTYPE = [ReplyType.VOICE, ReplyType.IMAGE]
 

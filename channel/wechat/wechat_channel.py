@@ -179,10 +179,10 @@ class WechatChannel(ChatChannel):
     def send(self, reply: Reply, context: Context):
         receiver = context["receiver"]
         if reply.type == ReplyType.TEXT:
-            itchat.send(reply.content +  "\n\n——————————————\nGPT群聊机器人欢迎大家，国内chatGPT登录网址：http://ai.chatgpt-bot.cloud，每月38元起即可私人畅聊。\nAI工具，助力我们生活工作更轻松！", toUserName=receiver)
+            itchat.send(reply.content +  "\n\n——————————————\nGPT群聊机器人欢迎大家，国内chatGPT登录网址：http://chat.chuzip.tech，每月38元起即可私人畅聊。\nAI工具，助力我们生活工作更轻松！", toUserName=receiver)
             logger.info("111[WX] sendMsg={}, receiver={}".format(reply, receiver))
         elif reply.type == ReplyType.ERROR or reply.type == ReplyType.INFO:
-            itchat.send(reply.content +  "\n\n——————————————\nGPT群聊机器人欢迎大家，国内chatGPT登录网址：http://ai.chatgpt-bot.cloud，每月38元起即可私人畅聊。\nAI工具，助力我们生活工作更轻松！", toUserName=receiver)
+            itchat.send(reply.content +  "\n\n——————————————\nGPT群聊机器人欢迎大家，国内chatGPT登录网址：http://chat.chuzip.tech，每月38元起即可私人畅聊。\nAI工具，助力我们生活工作更轻松！", toUserName=receiver)
             logger.info("222[WX] sendMsg={}, receiver={}".format(reply, receiver))
         elif reply.type == ReplyType.VOICE:
             itchat.send_file(reply.content, toUserName=receiver)
